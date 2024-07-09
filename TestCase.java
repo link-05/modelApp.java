@@ -14,7 +14,7 @@ public class TestCase {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
+    
 
     //Read file
     public static void readFile(File file) 
