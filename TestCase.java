@@ -1,49 +1,72 @@
-import java.util.Scanner;
-import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.util.Scanner;
+//To be extracting member information from txt file to convert into members.
 
 public class TestCase {
     public static void main(String[] args) {
-        File file = new File(
-            "C:\\Users\\linke\\OneDrive\\Documents\\GitHub\\modelApp.java\\TestCase.java");
         try {
-            readFile(file)};
-        } catch (IOException e) {
+            saveMember(signUpNewMember());;
+            readFile();
+        } catch (Exception e) {
             e.printStackTrace();
         }
+           
+    }
     
 
-    //Read file
-    public static void readFile(File file) 
-    {
-        int i;
-        Path fileName = Paths.get("C:\\Users\\linke\\OneDrive\\Documents\\GitHub\\modelApp.java\\TestCase.java");
-        //Remain true until there is nothing to read.
-        while((i - file.read()) != -1)
-
-            // Print all the content of a file
-            System.out.print((char)i);
+    // Read file
+    public static void readFile() {
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader("MemberList.txt"));
+            String line;
+            System.out.println("Now printing the log info");
+            while((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+            reader.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
     }
 
-    //Read and write file
-    public static void writeFile(File file) throws IOException
+    //Write file
+    public static void saveMember(Member newMember)
     {
-        //Content of the file is assigned with this
-        String text 
-            = "Test text 1";
-        // Defining the file name for the file. Ai Generated
-        Path fileName = Paths.get("C:\\Users\\linke\\OneDrive\\Documents\\GitHub\\modelApp.java\\TestCase.txt");
+        //Try-catch block to let it run
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter("MemberList.txt"));
+            // Write the text to the file - can run with while loop
+            writer.write(newMember.getUsername() + ", " + newMember.getPassword() + 
+                 ", " + newMember.getDateOfBirth() + ", " + newMember.getId());
+            writer.close(); // Writing will not be made if there is not a close statement.
+        } catch(IOException e) {
+            e.printStackTrace();
+        }
 
-        // Write the text to the file
-        Files.write(fileName, text.getBytes());
-    
+    }//end of writeFile class
 
-        // Defining the file name fo the file
-            // Path fileName = Path.of(
-                
-            // )
+    public static Member signUpNewMember() {
+        //get all necessary information for creating a member account.
+        Scanner in = new Scanner(System.in);
+        System.out.println("Please enter in your desired username: ");
+        String user = in.nextLine();
+        System.out.println("Please enter in your desired password: ");
+        String pass = in.nextLine();
+        System.out.println("Please enter in your date of birth starting with the month: ");
+        int month = in.nextInt();
+        System.out.println("Please enter in the day: ");
+        int day = in.nextInt();
+        System.out.println("Please enter in the year: ");
+        int year = in.nextInt();
+        Member x  = new Member(user, pass, day, month, year);
+        System.out.print("Your membership is made successfully. Your username is " + x.getUsername() + 
+            ".\nYour password is " + x.getPassword() + ". \n Your member id is " + x.getId() + ".\n");
+        in.close();
+        return x;
     }
 }

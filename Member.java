@@ -32,8 +32,8 @@ public class Member {
         return password;
     }
 
-    public String getId() {
-        return id;
+    public int getId() {
+        return Integer.parseInt(id.substring(0, id.indexOf(".")));
     }
 
     public String getDateOfBirth() {
