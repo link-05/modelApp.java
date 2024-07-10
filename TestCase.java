@@ -54,7 +54,7 @@ public class TestCase {
         Scanner in = new Scanner(System.in); 
         boolean isRep = true;
         String thatUser = null;
-        while(isRep) {
+        while(isRep) { //is repetitive is always true but flips to false when entered username does not already exist in file.
             System.out.println("Please enter in your desired username: ");
             thatUser = in.nextLine();
             if(checkIfExistingInFile(thatUser)) {
@@ -62,12 +62,14 @@ public class TestCase {
             } else {
                 isRep = false;
             }
-        }
+        }//end of username check 
         System.out.println("Please enter in your desired password: ");
         String pass = in.nextLine();
         System.out.println("Please enter in your date of birth (mm/dd/yyyy): ");
         String dob = in.nextLine();
+        //end of information gathering
         Member x  = new Member(thatUser, pass, dob);
+        //Member object is created and printed out to confirm.
         System.out.print("Your membership is made successfully. Your username is " + x.getUsername() + 
             ".\nYour password is " + x.getPassword() + ". \n Your member id is " + x.getId() + ".\n");
         in.close();
