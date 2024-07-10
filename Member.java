@@ -6,12 +6,12 @@ public class Member {
     private String dateOfBirth;
     private String id;
     
-    public Member(String user, String pass, int day, int month, int year) {
+    public Member(String user, String pass, String dob) {
         username = user;
         password = pass;
         members++;
         id = "" + members;
-        dateOfBirth = "" + month + day + year;
+        dateOfBirth = dob;
     }
 
     //Method to check if Username match. Used for comparing to input
