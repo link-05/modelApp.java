@@ -35,8 +35,7 @@ public class TestCase {
     }
 
     //Write file
-    public static void saveMember(Member newMember, boolean append)
-    {
+    public static void saveMember(Member newMember, boolean append) {
         //Try-catch block to let it run
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter("MemberList.txt", append));
@@ -52,14 +51,23 @@ public class TestCase {
 
     public static Member signUpNewMember() {
         //get all necessary information for creating a member account.
-        Scanner in = new Scanner(System.in);
-        System.out.println("Please enter in your desired username: ");
-        String user = in.nextLine();
+        Scanner in = new Scanner(System.in); 
+        boolean isRep = true;
+        String thatUser = null;
+        while(isRep) {
+            System.out.println("Please enter in your desired username: ");
+            thatUser = in.nextLine();
+            if(checkIfExistingInFile(thatUser)) {
+                System.out.println("Username already exist please use a different one");
+            } else {
+                isRep = false;
+            }
+        }
         System.out.println("Please enter in your desired password: ");
         String pass = in.nextLine();
         System.out.println("Please enter in your date of birth (mm/dd/yyyy): ");
         String dob = in.nextLine();
-        Member x  = new Member(user, pass, dob);
+        Member x  = new Member(thatUser, pass, dob);
         System.out.print("Your membership is made successfully. Your username is " + x.getUsername() + 
             ".\nYour password is " + x.getPassword() + ". \n Your member id is " + x.getId() + ".\n");
         in.close();
@@ -67,7 +75,7 @@ public class TestCase {
     }//end of sign up member class
 
     //This class will verify that the passed username is not matching any in the file.
-    public static boolean checkIfExisting(String anyText) {
+    public static boolean checkIfExistingInFile(String anyText) {
         try {
             BufferedReader reader = new BufferedReader(new FileReader("MemberList.txt"));
             String line;
