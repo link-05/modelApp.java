@@ -1,3 +1,7 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.lang.String;
+
 public class Member {
     //A member will have a username, password, and id attached to them
     private String username;
@@ -12,6 +16,12 @@ public class Member {
         members++;
         id = "" + members;
         dateOfBirth = dob;
+    }
+
+    public Member() {
+        username = "";
+        password = "";
+        id = "";
     }
 
     //Method to check if Username match. Used for comparing to input
@@ -46,6 +56,21 @@ public class Member {
 
     public void setPassword(String newPassword) {
         password = newPassword;
+    }
+
+    // For use to maintain accurate count of member when reading file then writing a new member into file.
+    public void updateMemberCount(){
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader("MemberList.txt"));
+            String test = "";
+            while((test = reader.readLine()) != null) {
+                members++;
+            }
+            reader.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
     }
 
 }
