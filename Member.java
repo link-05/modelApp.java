@@ -44,6 +44,7 @@ public class Member {
 
     public int getId() {
         return Integer.parseInt(id.substring(0, id.indexOf(".")));
+        // return Integer.parseInt(id.substring(0, id.indexOf(".")));
     }
 
     public String getDateOfBirth() {
@@ -62,9 +63,10 @@ public class Member {
     public void updateMemberCount(){
         try {
             BufferedReader reader = new BufferedReader(new FileReader("MemberList.txt"));
-            String test = "";
-            while((test = reader.readLine()) != null) {
+            String test = reader.readLine();
+            while(test != null) {
                 members++;
+                test = reader.readLine();
             }
             reader.close();
         } catch (Exception e) {
