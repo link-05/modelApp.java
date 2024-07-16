@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.util.Scanner;
+import validation.pack.*;
 //To be extracting member information from txt file to convert into members.
 
 public class TestCase {
