@@ -51,7 +51,7 @@ public class TestCase {
         System.out.println("Do you wish to register another user? (Y/N)");
         String response = "";
         response = in.nextLine();
-        return response.equalsIgnoreCase("n");
+        return response.equalsIgnoreCase("y");
     }//end of askToRegisterMoreMember method
 
     //Write file by passing in a member object to extract information. Append file to not overwrite existing file information.
@@ -81,7 +81,7 @@ public class TestCase {
             Valid userCheck = new Valid(8, 20, true, first, last);
 
             while(isRep) { //is repetitive is always true but flips to false when entered username does not already exist in file.
-                System.out.println("Please enter in your desired username: ");
+                System.out.println("Please enter in your desired username from 8 letter up to 19 letters (Must contain a special character of ascii 33 to 42): ");
                 thatUser = input.nextLine();
                 // input.next();
                 if(checkIfExistingInFile(thatUser)) {
