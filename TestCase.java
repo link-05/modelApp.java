@@ -74,13 +74,19 @@ public class TestCase {
             Scanner input = new Scanner(System.in);
             boolean isRep = true;
             String thatUser = "";
+            System.out.println(("What is your first name?"));
+            String first = input.nextLine();
+            System.out.println(("What is your last name?"));
+            String last = input.nextLine();
+            Valid userCheck = new Valid(8, 20, true, first, last);
+
             while(isRep) { //is repetitive is always true but flips to false when entered username does not already exist in file.
                 System.out.println("Please enter in your desired username: ");
                 thatUser = input.nextLine();
                 // input.next();
                 if(checkIfExistingInFile(thatUser)) {
                     System.out.println("Username already exist please use a different one");
-                }else {
+                }else if(userCheck.isValidUser(thatUser)) {
                     isRep = false;
                 }
             }//end of username check 
