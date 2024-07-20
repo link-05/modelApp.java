@@ -59,8 +59,14 @@ public class TestCase {
         //Try-catch block to let it run
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter("MemberList.txt", append));
-            // Write the text to the file - can run with while loop
-            writer.write(newMember.getUsername() + ", " + newMember.getPassword() + 
+            /* Write the text to the file - it can run with a while loop
+             * text will be formatted and separated with a comma to allow better use of delimiters in the future.
+             * a combination of getter class will be used
+             * all line in the file should look like that
+             * 
+             */
+            writer.write(newMember.getFirstName() + ", " + newMember.getLastName() + ", " + 
+                newMember.getUsername() + ", " + newMember.getPassword() + 
                  ", " + newMember.getDateOfBirth() + ", " + newMember.getId() + "\n");
             writer.close(); // Writing will not be made if there is not a close statement.
         } catch(IOException e) {
@@ -72,32 +78,38 @@ public class TestCase {
     public static Member signUpNewMember() throws Exception {
         //get all necessary information for creating a member account.
             Scanner input = new Scanner(System.in);
-            boolean isRep = true;
-            String thatUser = "";
+            //Used to loop the username 
+            boolean isRep = true;  
+            //Get the first and last name of the user to be used for password check later.
+
             System.out.println(("What is your first name?"));
             String first = input.nextLine();
             System.out.println(("What is your last name?"));
             String last = input.nextLine();
             Valid userCheck = new Valid(8, 20, true, first, last);
-
+            
+            String thatUser = "";
             while(isRep) { //is repetitive is always true but flips to false when entered username does not already exist in file.
                 System.out.println("Please enter in your desired username from 8 letter up to 19 letters (Must contain a special character of ascii 33 to 42): ");
                 thatUser = input.nextLine();
-                // input.next();
                 if(checkIfExistingInFile(thatUser)) {
                     System.out.println("Username already exist please use a different one");
-                }else if(userCheck.isValidUser(thatUser)) {
+                }else if(!userCheck.isValidUser(thatUser)) {
                     isRep = false;
                 }
             }//end of username check 
-            System.out.println("Please enter in your desired password: ");
-            String pass = input.nextLine();
-            // input.next(); //clearing the newline character left by the scanner.
+
+            //Password check
+            String pass = "";
+            while(!userCheck.isValidPass(pass)) {
+                System.out.println("Please enter in your desired password: ");
+                pass = input.nextLine();
+            }//end of password check
+
             System.out.println("Please enter in your date of birth (mm/dd/yyyy): ");
             String dob = input.nextLine();
-            // input.next();
             //end of information gathering
-            Member x  = new Member(thatUser, pass, dob);
+            Member x  = new Member(first, last, thatUser, pass, dob);
             //Member object is created and printed out to confirm.
             System.out.print("Your membership is made successfully.\nYour username is " + x.getUsername() + 
                 ".\nYour password is " + x.getPassword() + ".\nYour member id is " + x.getId() + ".\n");

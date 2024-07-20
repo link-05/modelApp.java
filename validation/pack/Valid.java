@@ -66,6 +66,7 @@ public class Valid {
         if(nameCheck(input) && isValidUser(input) ) {
             return true;
         }
+        System.out.println("Please enter a password that has a character, is between ascii 33 to 43 and has length of 9 to 20.");
         return false;
     }
 
