@@ -14,8 +14,4 @@ bin, bob, tim, 13
 tryu, iuy, gy, 14
 evan, tim, jkl, 15
 testi, nope, 10/10/2024, 16
-asdfas , asfas df, as fdsa, 17
-asfd asd, as fas fd, as dfasd f, 18
-klin!22222, link0, 11/05/3322, 19
-linker!!!, linker!!!, 05/05/2005, 20
-linJOhn!!, linJOHN!!!, 04/03/2022, 21
+kevin, lin, link!2022, liassdw!!2, 11/02/2002, 18

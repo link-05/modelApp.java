@@ -24,9 +24,11 @@ public class Valid {
         if(input.length() > minLength && input.length() <= maxLength) {
             return true;
         }
-        errMessage("username", "The length needs to be from " 
+        else {
+            errMessage("input", "The length needs to be from " 
                     + minLength + " to " + maxLength + ".");
-        return false;
+            return false;
+        }
     }
 
     //Method to tell the user that the ___ is incorrect.
@@ -44,21 +46,18 @@ public class Valid {
                     return true;
                 }
             }
+            errMessage("username", "There needs to be one character.");
+            return false;
         } else {
             return true;
         }
-        errMessage("username", "There needs to be one character.");
-        return false;
     }
 
     //This method will be used by the main method to test if a username is valid and following the protocol.
     public boolean isValidUser(String input) {
         //Call the other two methods to check.
-        //if a string is valid then it will meet all the requirements of the constructor.
-        if(hasChar(input) && checkLength(input)) {
-            return true;
-        }
-        return false;
+        //if a string is valid then it will meet all the requirements for character and length.
+        return (checkLength(input) && hasChar(input));
     }
 
     //This method will be used by the main method to test if a password is valid and following the protocol.

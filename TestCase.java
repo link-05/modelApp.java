@@ -21,7 +21,9 @@ public class TestCase {
                 saveMember(signUpNewMember(), true);
                 //Read file will read the entire file to ensure accuracy.
                 readFile();
-                //askToRegisterMoreMember method will prompt user to reply y or n that will result in a boolean variable being returned.
+                /*askToRegisterMoreMember method will prompt user to reply y or n that will result in a boolean variable being returned.
+                *condition controlling while loop to sign up more members
+                */
                 isStillCreatingUser = askToRegisterMoreMember();
             } catch (Exception e) {
                 e.printStackTrace();
@@ -63,7 +65,6 @@ public class TestCase {
              * text will be formatted and separated with a comma to allow better use of delimiters in the future.
              * a combination of getter class will be used
              * all line in the file should look like that
-             * 
              */
             writer.write(newMember.getFirstName() + ", " + newMember.getLastName() + ", " + 
                 newMember.getUsername() + ", " + newMember.getPassword() + 
@@ -79,7 +80,7 @@ public class TestCase {
         //get all necessary information for creating a member account.
             Scanner input = new Scanner(System.in);
             //Used to loop the username 
-            boolean isRep = true;  
+            boolean needToRedoUser = true;  
             //Get the first and last name of the user to be used for password check later.
 
             System.out.println(("What is your first name?"));
@@ -89,18 +90,21 @@ public class TestCase {
             Valid userCheck = new Valid(8, 20, true, first, last);
             
             String thatUser = "";
-            while(isRep) { //is repetitive is always true but flips to false when entered username does not already exist in file.
-                System.out.println("Please enter in your desired username from 8 letter up to 19 letters (Must contain a special character of ascii 33 to 42): ");
+            while(needToRedoUser) { 
+            //is always true but flips to false when entered username does not already exist in file and passes validation.
+                System.out.println("Please enter in your desired username from 9 letter up to 20 letters (Must contain a special character of ascii 33 to 42): ");
                 thatUser = input.nextLine();
                 if(checkIfExistingInFile(thatUser)) {
                     System.out.println("Username already exist please use a different one");
-                }else if(!userCheck.isValidUser(thatUser)) {
-                    isRep = false;
+                }else if(userCheck.isValidUser(thatUser)) {
+                    needToRedoUser = false;
                 }
             }//end of username check 
 
             //Password check
-            String pass = "";
+            System.out.println("Please enter in your desired password: ");
+            String pass = input.nextLine();
+            //need to be opposite because if  password is valid then it will return true which should not ask for password again
             while(!userCheck.isValidPass(pass)) {
                 System.out.println("Please enter in your desired password: ");
                 pass = input.nextLine();
