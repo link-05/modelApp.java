@@ -86,6 +86,8 @@ public class Member {
                 members++;
                 test = reader.readLine();
             }
+            //remove the count from the first line with the guide
+            members--;
             reader.close();
         } catch (Exception e) {
             e.printStackTrace();

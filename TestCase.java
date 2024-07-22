@@ -66,9 +66,9 @@ public class TestCase {
              * a combination of getter class will be used
              * all line in the file should look like that
              */
-            writer.write(newMember.getId() + ", " + newMember.getFirstName() + ", " + newMember.getLastName() + ", " + 
-                newMember.getUsername() + ", " + newMember.getPassword() + 
-                 ", " + newMember.getDateOfBirth() + "\n");
+            writer.write("ID." + newMember.getId() + ", F." + newMember.getFirstName() + ", L." + newMember.getLastName() + ", U." + 
+                newMember.getUsername() + ", P." + newMember.getPassword() + 
+                 ", DOB." + newMember.getDateOfBirth() + "\n");
             writer.close(); // Writing will not be made if there is not a close statement.
         } catch(IOException e) {
             e.printStackTrace();
