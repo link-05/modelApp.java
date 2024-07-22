@@ -36,8 +36,8 @@ public class Member {
     }
 
     //Method to check if Password match. Used for comparing to input
-    public Boolean comparePassword(String thatPass) {
-        return this.password.equals(thatPass);
+    public Boolean comparePassword(String thatPassword) {
+        return this.password.equals(thatPassword);
     }
 
     //Getter methods for each instance variable
