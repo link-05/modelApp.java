@@ -62,14 +62,47 @@ public class Valid {
 
     //This method will be used by the main method to test if a password is valid and following the protocol.
     public boolean isValidPassword(String input) {
-        if(foundNameInInput(input) && isValidUsername(input) ) {
+        if(foundRealNameInInput(input) && isValidUsername(input) && includesUpperLowerAndNumber(input) ) {
             return true;
         }
-        System.out.println("Please enter a password that has a character, is between ascii 33 to 43 and has length of 9 to 20.");
+        System.out.println("Please enter a password that has a special, uppercase, and lowercase character\nSpecial character has to be between ASCII 33 to 43 and full password has to have length of 9 to 20.");
         return false;
     }
 
-    private boolean foundNameInInput(String input) {
+    private boolean includesUpperLowerAndNumber(String input) {
+        boolean hasUpperCase = false;
+        boolean hasLowerCase = false;
+        boolean hasNumber = false;
+        for(int i = 0; i < input.length(); i++) {
+            char singleChar = input.charAt(i);
+            if(singleChar == Character.toUpperCase(singleChar) && charIsNotNumber((int)singleChar)) {
+                hasUpperCase = true;
+            }
+            if(singleChar == Character.toLowerCase(singleChar) && charIsNotNumber((int)singleChar)) {
+                hasLowerCase = true;
+            }
+            if(charIsNotNumber((int)singleChar)) {
+                hasNumber = true;
+            }
+            if(hasUpperCase && hasLowerCase && hasNumber) return true;
+        }
+        if(!hasUpperCase) {
+            errMessage("password", "It needs to have an uppercase character\n");
+        }
+        if(!hasLowerCase) {
+            errMessage("password", "It needs to have a lowercase character\n");
+        }
+        if(!hasNumber) {
+            errMessage("password", "It need to have a number\n");
+        }
+        return false;
+    }
+
+    private boolean charIsNotNumber(int ASCIIValue) {
+        return (ASCIIValue <= 48 && ASCIIValue >= 57);
+    }
+
+    private boolean foundRealNameInInput(String input) {
         if(input.contains(firstName) || input.contains(lastName)) {
             System.out.println("Please do not include name in username");
             return false;
