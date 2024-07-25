@@ -75,13 +75,16 @@ public class Valid {
         boolean hasNumber = false;
         for(int i = 0; i < input.length(); i++) {
             char singleChar = input.charAt(i);
+            //To make sure it is not a number nor a special char while being a uppercase
             if(singleChar == Character.toUpperCase(singleChar) && charIsNotNumber((int)singleChar)) {
                 hasUpperCase = true;
             }
+            //To make sure it is not a number nor a special char while being a lowercase
             if(singleChar == Character.toLowerCase(singleChar) && charIsNotNumber((int)singleChar)) {
                 hasLowerCase = true;
             }
-            if(charIsNotNumber((int)singleChar)) {
+            //To make sure that the value is a number and not a special char.
+            if(!charIsNotNumber((int)singleChar) && (int)singleChar > 47) {
                 hasNumber = true;
             }
             if(hasUpperCase && hasLowerCase && hasNumber) return true;
@@ -99,7 +102,7 @@ public class Valid {
     }
 
     private boolean charIsNotNumber(int ASCIIValue) {
-        return (ASCIIValue <= 48 && ASCIIValue >= 57);
+        return (ASCIIValue < 33 || ASCIIValue >= 57);
     }
 
     private boolean foundRealNameInInput(String input) {
