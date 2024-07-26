@@ -22,6 +22,16 @@ public class Member {
         this.lastName = last;
     }
 
+    //For the data match to return data with  
+    public Member(String id, String first, String last, String user, String pass, String dob) {
+        username = user;
+        password = pass;
+        this.id=id;
+        dateOfBirth = dob;
+        this.firstName = first;
+        this.lastName = last;
+    }
+
     public Member() {
         username = "";
         password = "";

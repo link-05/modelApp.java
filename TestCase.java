@@ -6,6 +6,9 @@ import java.io.FileReader;
 import java.util.Scanner;
 import validation.pack.*;
 //To be extracting member information from txt file to convert into members.
+//How to extract member informatiion to login?
+//How to prompt member to login vs create user.
+//How to make history log work.
 
 public class TestCase {
     public static void main(String[] args) {
@@ -33,7 +36,7 @@ public class TestCase {
     
 
     // Read file
-    public static void readFile() { //throws IOException{
+    public static void readFile() {
         try(BufferedReader reader = new BufferedReader(new FileReader("MemberList.txt"))) { //Try with resources.
             String line;
             System.out.println("Now printing the log info");
@@ -45,6 +48,37 @@ public class TestCase {
             e.printStackTrace();
         } 
         
+    }//end of read file method
+
+    // Check file for dataMatch class
+    public static Member loginUser() {
+        try(BufferedReader reader = new BufferedReader(new FileReader("MemberList.txt"))) { //Try with resources.
+            String line;
+            Scanner input = new Scanner(System.in);
+            System.out.println("Enter your username: ");
+            String usernameInput = input.nextLine();
+            System.out.println("Enter your password: ");
+            String passwordInput = input.nextLine();
+            //A dataMatch object to compare the input information with the file.
+            dataMatch forLogin = new dataMatch();
+            
+            System.out.println("Now comparing the logged information");
+            //The file will be extracted line by line and broken into tokens to be compared with the username and password. 
+            //The member will be returned that can probably be used for a logged in user.
+            while((line = reader.readLine()) != null) {
+                forLogin.setCurrentLine(line);
+                if(forLogin.isMatchingUsernameAndPassword(usernameInput, passwordInput)) {
+                    System.out.println("Login Successful!");
+                    forLogin.printCurrentLine();
+                    return forLogin.makeTheMember();
+                }
+                System.out.println(line);
+            }
+            // reader.close(); // Writing will not be made if there is not a close statement.
+        } catch (Exception e) {
+            e.printStackTrace();
+        } 
+            
     }//end of read file method
 
     //This method ask user to decide if they want to register more members then return the result as a boolean.
