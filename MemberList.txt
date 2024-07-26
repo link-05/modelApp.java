@@ -1,3 +1,3 @@
-ID.Member ID |F.First name |L.Last name |U.Username |P.Password |DOB.Date Of Birth 
-ID.1, F.kevin, L.lin, U.klin1111!, P.kl11110000!, DOB.11/11/2011
-ID.2, F.john, L.appleseed, U.appplejohn!, P.appleJUhn!!!, DOB.05/05/2005
+Member ID, First name, Last name, Username, Password, Date Of Birth 
+1, kevin, lin, klin1111!, kl11110000!, 11/11/2011
+2, john, appleseed, appplejohn!, appleJUhn!!!, 05/05/2005
