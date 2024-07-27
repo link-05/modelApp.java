@@ -1,3 +1,3 @@
 Member ID, First name, Last name, Username, Password, Date Of Birth 
-1, kevin, lin, klin1111!, kl11110000!, 11/11/2011
-2, john, appleseed, appplejohn!, appleJUhn!!!, 05/05/2005
+1,kevin,lin,klin1111!,kl11110000!,11/11/2011
+2,john,appleseed,appplejohn!,appleJUhn!!!,05/05/2005

@@ -17,17 +17,17 @@ public class dataMatch {
 
     //Method to check if the current username matches the one in the file.
     public boolean isMatchingUsernameAndPassword(String thatUser, String thatPassword) {
-        return this.currentLine[4].equalsIgnoreCase(thatUser) && this.currentLine[5].equalsIgnoreCase(thatPassword);
+        return this.currentLine[3].equalsIgnoreCase(thatUser) && this.currentLine[4].equalsIgnoreCase(thatPassword);
     }
 
     //Read out each value for current line
     public void printCurrentLine() {
         System.out.println("Member id: " + currentLine[0] + 
-                            "First Name: " + currentLine[1] + 
-                            "Last: " + currentLine[2] + 
-                            "Username: " + currentLine[3] + 
-                            "Password:: " + currentLine[4] + 
-                        "dob: " + currentLine[5]);
+                            "\nFirst Name: " + currentLine[1] + 
+                            "\nLast: " + currentLine[2] + 
+                            "\nUsername: " + currentLine[3] + 
+                            "\nPassword:: " + currentLine[4] + 
+                        "\nDOB: " + currentLine[5]);
     }
     //Method to make the member object if username and password is matching
     public Member makeTheMember() {

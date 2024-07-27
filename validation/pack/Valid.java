@@ -1,4 +1,6 @@
+
 package validation.pack;
+import java.lang.Character;
 
 public class Valid {
     //The minimum and maximum length for username. The special char requirement will be checked.

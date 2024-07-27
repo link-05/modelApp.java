@@ -33,7 +33,7 @@ public class Member {
     }
 
     public Member() {
-        username = "";
+        username = "null";
         password = "";
         id = "";
         firstName = "";

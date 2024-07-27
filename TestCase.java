@@ -6,32 +6,42 @@ import java.io.FileReader;
 import java.util.Scanner;
 import validation.pack.*;
 //To be extracting member information from txt file to convert into members.
-//How to extract member informatiion to login?
+//How to extract member information to login?
 //How to prompt member to login vs create user.
 //How to make history log work.
 
 public class TestCase {
+    private static Scanner input = new Scanner(System.in);
     public static void main(String[] args) {
         //The condition for the while loop to create user
         boolean needToStillCreateNewUser = true;
-        //The default member object to call updateMemberCount with which will get member count up to where it is supposed to be 
-        Member setting = new Member();
-        setting.updateMemberCount();
-        //Enters the while loop with try catch for making a member and reading from the file for a member.
-        while(needToStillCreateNewUser) {
-            try {
-                //Creates a member object through signUpNewMember which is passed into saveMemberInFile which is the file writer. The append true is to avoid overwriting existing file info
-                writeMemberInFile(signUpNewMember(), true);
-                //Read file will read the entire file to ensure accuracy.
-                readFile();
-                /*askToRegisterMoreMember method will prompt user to reply y or n that will result in a boolean variable being returned.
-                *condition controlling while loop to sign up more members
-                */
-                needToStillCreateNewUser = askToRegisterMoreMember();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }//end of catch
-        }//end of while loop
+        //The scanner to grab decisions form user
+        System.out.println("Do you wish to login or sign up (type login or sign up)");
+        String responseToLogin = input.nextLine();
+        if(responseToLogin.equalsIgnoreCase("sign up")){
+            //The default member object to call updateMemberCount with which will get member count up to where it is supposed to be 
+            Member setting = new Member();
+            setting.updateMemberCount();
+            //Enters the while loop with try catch for making a member and reading from the file for a member.
+            while(needToStillCreateNewUser) {
+                try {
+                    //Creates a member object through signUpNewMember which is passed into saveMemberInFile which is the file writer. The append true is to avoid overwriting existing file info
+                    writeMemberInFile(signUpNewMember(), true);
+                    //Read file will read the entire file to ensure accuracy.
+                    readFile();
+                    /*askToRegisterMoreMember method will prompt user to reply y or n that will result in a boolean variable being returned.
+                    *condition controlling while loop to sign up more members
+                    */
+                    needToStillCreateNewUser = askToRegisterMoreMember();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }//end of catch
+            }//end of while loop
+        }//End of sign up
+        else {
+            System.out.println("This is the login.");
+            loginUser();
+        }
     }
     
 
@@ -52,38 +62,46 @@ public class TestCase {
 
     // Check file for dataMatch class
     public static Member loginUser() {
-        try(BufferedReader reader = new BufferedReader(new FileReader("MemberList.txt"))) { //Try with resources.
-            String line;
-            Scanner input = new Scanner(System.in);
-            System.out.println("Enter your username: ");
-            String usernameInput = input.nextLine();
-            System.out.println("Enter your password: ");
-            String passwordInput = input.nextLine();
-            //A dataMatch object to compare the input information with the file.
-            dataMatch forLogin = new dataMatch();
-            
-            System.out.println("Now comparing the logged information");
-            //The file will be extracted line by line and broken into tokens to be compared with the username and password. 
-            //The member will be returned that can probably be used for a logged in user.
-            while((line = reader.readLine()) != null) {
-                forLogin.setCurrentLine(line);
-                if(forLogin.isMatchingUsernameAndPassword(usernameInput, passwordInput)) {
-                    System.out.println("Login Successful!");
-                    forLogin.printCurrentLine();
-                    return forLogin.makeTheMember();
+        boolean choiceToLogin = true;
+        while ((choiceToLogin)) {
+            try(BufferedReader reader = new BufferedReader(new FileReader("MemberList.txt"))) { //Try with resources.
+                String line;
+                System.out.println("Enter your username: ");
+                String usernameInput = input.nextLine();
+                System.out.println("Enter your password: ");
+                String passwordInput = input.nextLine();
+                //A dataMatch object to compare the input information with the file.
+                dataMatch forLogin = new dataMatch();
+                
+                System.out.println("Now comparing the logged information");
+                //The file will be extracted line by line and broken into tokens to be compared with the username and password. 
+                //The member will be returned that can probably be used for a logged in user.
+                while((line = reader.readLine()) != null) {
+                    forLogin.setCurrentLine(line);
+                    if(forLogin.isMatchingUsernameAndPassword(usernameInput, passwordInput)) {
+                        System.out.println("Login Successful!");
+                        forLogin.printCurrentLine();
+                        Member loggedInUser = forLogin.makeTheMember();
+                        return loggedInUser;
+                    }
                 }
-                System.out.println(line);
+            } catch (Exception e) {
+                e.printStackTrace();
+            } 
+            System.out.println("Username or Password is not found, please choose to continue trying or exit (Type \"Continue\" or \"exit\")");
+            String choiceAfterUserNotFound = input.nextLine();
+            if(choiceAfterUserNotFound.equalsIgnoreCase("continue")){
+                System.out.println("Try again");
             }
-            // reader.close(); // Writing will not be made if there is not a close statement.
-        } catch (Exception e) {
-            e.printStackTrace();
-        } 
-            
-    }//end of read file method
+            else {
+                return new Member(); //The main method will read a member object so it has to be null
+            }
+        }//loop to continue
+        return new Member();
+    }//end loginUser method
 
     //This method ask user to decide if they want to register more members then return the result as a boolean.
     public static Boolean askToRegisterMoreMember() {
-        Scanner input = new Scanner(System.in);
         System.out.println("Do you wish to register another user? (Y/N)");
         String responseToMakeMoreUser = "";
         responseToMakeMoreUser = input.nextLine();
@@ -100,9 +118,9 @@ public class TestCase {
              * a combination of getter class will be used
              * all line in the file should look like that
              */
-            writer.write("ID." + newMember.getId() + ", F." + newMember.getFirstName() + ", L." + newMember.getLastName() + ", U." + 
-                newMember.getUsername() + ", P." + newMember.getPassword() + 
-                 ", DOB." + newMember.getDateOfBirth() + "\n");
+            writer.write(newMember.getId() + "," + newMember.getFirstName() + "," + newMember.getLastName() + "," + 
+                newMember.getUsername() + "," + newMember.getPassword() + 
+                 "," + newMember.getDateOfBirth() + "\n");
             writer.close(); // Writing will not be made if there is not a close statement.
         } catch(IOException e) {
             e.printStackTrace();
@@ -112,8 +130,7 @@ public class TestCase {
     //Method to gather all information needed to make a member object
     public static Member signUpNewMember() throws Exception {
         //get all necessary information for creating a member account.
-            Scanner input = new Scanner(System.in);
-            //Used to loop the username 
+                //Used to loop the username 
             boolean needToRedoUserName = true;  
             //Get the first and last name of the user to be used for password check later.
 
