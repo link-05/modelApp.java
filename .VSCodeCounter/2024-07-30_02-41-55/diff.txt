@@ -1,0 +1,55 @@
+Date : 2024-07-30 02:41:55
+Directory : /Users/linke/modelApp.java
+Total : 14 files,  0 codes, 0 comments, 2 blanks, all 2 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| Java     |         12 |          0 |          0 |          2 |          2 |
+| Markdown |          2 |          0 |          0 |          0 |          0 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++-----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                              | files      | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                 |         14 |          0 |          0 |          2 |          2 |
+| . (Files)                                                                         |          7 |        255 |         58 |         48 |        361 |
+| ..                                                                                |          6 |       -345 |        -74 |        -60 |       -479 |
+| ../..                                                                             |          6 |       -345 |        -74 |        -60 |       -479 |
+| ../../..                                                                          |          6 |       -345 |        -74 |        -60 |       -479 |
+| ../../../c:                                                                       |          6 |       -345 |        -74 |        -60 |       -479 |
+| ../../../c:/Users                                                                 |          6 |       -345 |        -74 |        -60 |       -479 |
+| ../../../c:/Users/linke                                                           |          6 |       -345 |        -74 |        -60 |       -479 |
+| ../../../c:/Users/linke/OneDrive                                                  |          6 |       -345 |        -74 |        -60 |       -479 |
+| ../../../c:/Users/linke/OneDrive/Documents                                        |          6 |       -345 |        -74 |        -60 |       -479 |
+| ../../../c:/Users/linke/OneDrive/Documents/GitHub                                 |          6 |       -345 |        -74 |        -60 |       -479 |
+| ../../../c:/Users/linke/OneDrive/Documents/GitHub/modelApp.java                   |          6 |       -345 |        -74 |        -60 |       -479 |
+| ../../../c:/Users/linke/OneDrive/Documents/GitHub/modelApp.java (Files)           |          5 |       -255 |        -58 |        -46 |       -359 |
+| ../../../c:/Users/linke/OneDrive/Documents/GitHub/modelApp.java/validation        |          1 |        -90 |        -16 |        -14 |       -120 |
+| ../../../c:/Users/linke/OneDrive/Documents/GitHub/modelApp.java/validation/pack   |          1 |        -90 |        -16 |        -14 |       -120 |
+| validation                                                                        |          1 |         90 |         16 |         14 |        120 |
+| validation/pack                                                                   |          1 |         90 |         16 |         14 |        120 |
++-----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-----------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                          | language | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| /Users/linke/modelApp.java/Event.java                                             | Java     |         14 |          1 |          2 |         17 |
+| /Users/linke/modelApp.java/Member.java                                            | Java     |         80 |          9 |         19 |        108 |
+| /Users/linke/modelApp.java/README.md                                              | Markdown |          2 |          0 |          1 |          3 |
+| /Users/linke/modelApp.java/TestCase.java                                          | Java     |        135 |         40 |         18 |        193 |
+| /Users/linke/modelApp.java/checkIn.java                                           | Java     |          0 |          0 |          1 |          1 |
+| /Users/linke/modelApp.java/dataMatch.java                                         | Java     |         24 |          8 |          6 |         38 |
+| /Users/linke/modelApp.java/scoreReport.java                                       | Java     |          0 |          0 |          1 |          1 |
+| /Users/linke/modelApp.java/validation/pack/Valid.java                             | Java     |         90 |         16 |         14 |        120 |
+| c:/Users/linke/OneDrive/Documents/GitHub/modelApp.java/Event.java                 | Java     |        -14 |         -1 |         -2 |        -17 |
+| c:/Users/linke/OneDrive/Documents/GitHub/modelApp.java/Member.java                | Java     |        -80 |         -9 |        -19 |       -108 |
+| c:/Users/linke/OneDrive/Documents/GitHub/modelApp.java/README.md                  | Markdown |         -2 |          0 |         -1 |         -3 |
+| c:/Users/linke/OneDrive/Documents/GitHub/modelApp.java/TestCase.java              | Java     |       -135 |        -40 |        -18 |       -193 |
+| c:/Users/linke/OneDrive/Documents/GitHub/modelApp.java/dataMatch.java             | Java     |        -24 |         -8 |         -6 |        -38 |
+| c:/Users/linke/OneDrive/Documents/GitHub/modelApp.java/validation/pack/Valid.java | Java     |        -90 |        -16 |        -14 |       -120 |
+| Total                                                                             |          |          0 |          0 |          2 |          2 |
++-----------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
