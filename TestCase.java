@@ -38,7 +38,7 @@ public class TestCase {
                 }//end of catch
             }//end of while loop
         }//End of sign up
-        else {
+        else { 
             System.out.println("This is the login.");
             loginUser();
         }
@@ -60,34 +60,22 @@ public class TestCase {
         
     }//end of read file method
 
-    // Check file for dataMatch class
+    // Check file for DataMatch class
     public static Member loginUser() {
         boolean choiceToLogin = true;
         while ((choiceToLogin)) {
-            try(BufferedReader reader = new BufferedReader(new FileReader("MemberList.txt"))) { //Try with resources.
-                String line;
-                System.out.println("Enter your username: ");
-                String usernameInput = input.nextLine();
-                System.out.println("Enter your password: ");
-                String passwordInput = input.nextLine();
-                //A dataMatch object to compare the input information with the file.
-                dataMatch forLogin = new dataMatch();
-                
-                System.out.println("Now comparing the logged information");
-                //The file will be extracted line by line and broken into tokens to be compared with the username and password. 
-                //The member will be returned that can probably be used for a logged in user.
-                while((line = reader.readLine()) != null) {
-                    forLogin.setCurrentLine(line);
-                    if(forLogin.isMatchingUsernameAndPassword(usernameInput, passwordInput)) {
-                        System.out.println("Login Successful!");
-                        forLogin.printCurrentLine();
-                        Member loggedInUser = forLogin.makeTheMember();
-                        return loggedInUser;
-                    }
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            } 
+            System.out.println("Enter your username: ");
+            String usernameInput = input.nextLine();
+            System.out.println("Enter your password: ");
+            String passwordInput = input.nextLine();
+            //A DataMatch object to compare the input information with the file.
+            DataMatch forLogin = new DataMatch();
+            //The method will find the data in the file and return the member that it corresponds to, if not found then a null first name member will be made.
+            Member loggedInUser = forLogin.findDataInFile(usernameInput, passwordInput);
+            if(!loggedInUser.getFirstName().equals("null")){
+                return loggedInUser;
+            }
+            //These statements will ask for the next steps to login else it will repeat.
             System.out.println("Username or Password is not found, please choose to continue trying or exit (Type \"Continue\" or \"exit\")");
             String choiceAfterUserNotFound = input.nextLine();
             if(choiceAfterUserNotFound.equalsIgnoreCase("continue")){
