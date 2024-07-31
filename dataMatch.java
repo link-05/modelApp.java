@@ -59,7 +59,7 @@ public class DataMatch {
         } 
         return null; //return a new null member if no match is found in the file which is impossible so it is just for java not to freak out.
     }
-    
+
     //Method to check if the current username matches the one in the file.
     private boolean isMatchingUsernameAndPassword(String thatUser, String thatPassword) {
         return this.currentLine[3].equalsIgnoreCase(thatUser) && this.currentLine[4].equalsIgnoreCase(thatPassword);
@@ -87,7 +87,7 @@ public class DataMatch {
     }
 
     //Method for checkIn to get a member id passed while returning a name for the id number. return first and last name.
-    public String idToMemberName() {
+    private String idToMemberName() {
         return this.currentLine[1] + " " + this.currentLine[2];
     }
 }

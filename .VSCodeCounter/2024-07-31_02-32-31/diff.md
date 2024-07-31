@@ -1,24 +1,22 @@
 # Diff Summary
 
-Date : 2024-07-25 02:47:23
+Date : 2024-07-31 02:32:31
 
-Directory c:\\Users\\linke\\OneDrive\\Documents\\GitHub\\modelApp.java
+Directory /Users/linke/modelApp.java
 
-Total : 3 files,  32 codes, 6 comments, 3 blanks, all 41 lines
+Total : 4 files,  40 codes, 10 comments, 6 blanks, all 56 lines
 
 [Summary](results.md) / [Details](details.md) / Diff Summary / [Diff Details](diff-details.md)
 
 ## Languages
 | language | files | code | comment | blank | total |
 | :--- | ---: | ---: | ---: | ---: | ---: |
-| Java | 3 | 32 | 6 | 3 | 41 |
+| Java | 3 | 38 | 10 | 6 | 54 |
+| Markdown | 1 | 2 | 0 | 0 | 2 |
 
 ## Directories
 | path | files | code | comment | blank | total |
 | :--- | ---: | ---: | ---: | ---: | ---: |
-| . | 3 | 32 | 6 | 3 | 41 |
-| . (Files) | 2 | 1 | 3 | 1 | 5 |
-| validation | 1 | 31 | 3 | 2 | 36 |
-| validation\\pack | 1 | 31 | 3 | 2 | 36 |
+| . | 4 | 40 | 10 | 6 | 56 |
 
 [Summary](results.md) / [Details](details.md) / Diff Summary / [Diff Details](diff-details.md)

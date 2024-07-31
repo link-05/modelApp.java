@@ -3,6 +3,8 @@
  * The id will be how each member is checking in with the event.
  */
 
+ //to do - make new txt file to hold the registration information for the event and a new txt file.
+
  import java.util.ArrayList;
 
 enum EventStatus {

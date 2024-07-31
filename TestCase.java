@@ -5,6 +5,7 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.util.Scanner;
 import validation.pack.*;
+import java.util.ArrayList;
 //To be extracting member information from txt file to convert into members.
 //How to extract member information to login?
 //How to prompt member to login vs create user.
@@ -15,6 +16,8 @@ public class TestCase {
     public static void main(String[] args) {
         //The condition for the while loop to create user
         boolean needToStillCreateNewUser = true;
+        //The placeholder for the logged in user after user chooses to login or after sign up.
+        Member loggedInUser = new Member();
         //The scanner to grab decisions form user
         System.out.println("Do you wish to login or sign up (type login or sign up)");
         String responseToLogin = input.nextLine();
@@ -37,11 +40,38 @@ public class TestCase {
                     e.printStackTrace();
                 }//end of catch
             }//end of while loop
+            //prompt user to login after creating a new sign in.
+            loginUser();
         }//End of sign up
         else { 
             System.out.println("This is the login.");
-            loginUser();
+            loggedInUser = loginUser();
         }
+        if(loggedInUser.getFirstName().equals("null")) return;
+
+        if(doYouWishToSee("events")) {
+            //The logged in user can now use the first feature of the system which is event.
+            //List of all the events.
+            ArrayList<Event> allEvents = new ArrayList<Event>();
+            //Constructor here is a temporary solution until the actual permission system for member and admin are implemented.
+            //Create all events for the list.
+            Event firstTournament = new Event(1, "Academy Cup", "This is the tournament hosted by the Academy for Table Tennis, all member have ability to participate.",
+                                                "Academy Of Table Tennis, 1st Building", "17:00", "07/31/2024");
+            Event firstWideLesson = new Event(2, "Wide Lesson", "This is a unique wide lesson for all.", "Academy Of Table Tennis, 2nd Building", "18:00", "07/31/2024");
+            //Add all events to the list.
+            allEvents.add(firstTournament);
+            allEvents.add(firstWideLesson);
+            for(Event event : allEvents) {
+                event.addEventToFile();
+            }
+
+            System.out.println("Here are all the events that we have: ");
+            for(Event event : allEvents) {
+                System.out.println(event);
+            }
+            //Need to implement the interaction with the user to choose which event they want to attend.
+        }
+
     }
     
 
@@ -60,9 +90,29 @@ public class TestCase {
         
     }//end of read file method
 
+    //Write file by passing in a member object to extract information. Append file to not overwrite existing file information.
+    public static void writeMemberInFile(Member newMember, boolean append) throws IOException{
+        //Try-catch block to let it run
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter("MemberList.txt", append));
+            /* Write the text to the file - it can run with a while loop
+             * text will be formatted and separated with a comma to allow better use of delimiters in the future.
+             * a combination of getter class will be used
+             * all line in the file should look like that
+             */
+            writer.write(newMember.getId() + "," + newMember.getFirstName() + "," + newMember.getLastName() + "," + 
+                newMember.getUsername() + "," + newMember.getPassword() + 
+                 "," + newMember.getDateOfBirth() + "\n");
+            writer.close(); // Writing will not be made if there is not a close statement.
+        } catch(IOException e) {
+            e.printStackTrace();
+        }
+    }//end of writeFile class
+
     // Check file for DataMatch class
     public static Member loginUser() {
         boolean choiceToLogin = true;
+        System.out.println("This is the login screen.");
         while ((choiceToLogin)) {
             System.out.println("Enter your username: ");
             String usernameInput = input.nextLine();
@@ -95,25 +145,6 @@ public class TestCase {
         responseToMakeMoreUser = input.nextLine();
         return responseToMakeMoreUser.equalsIgnoreCase("y");
     }//end of askToRegisterMoreMember method
-
-    //Write file by passing in a member object to extract information. Append file to not overwrite existing file information.
-    public static void writeMemberInFile(Member newMember, boolean append) throws IOException{
-        //Try-catch block to let it run
-        try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter("MemberList.txt", append));
-            /* Write the text to the file - it can run with a while loop
-             * text will be formatted and separated with a comma to allow better use of delimiters in the future.
-             * a combination of getter class will be used
-             * all line in the file should look like that
-             */
-            writer.write(newMember.getId() + "," + newMember.getFirstName() + "," + newMember.getLastName() + "," + 
-                newMember.getUsername() + "," + newMember.getPassword() + 
-                 "," + newMember.getDateOfBirth() + "\n");
-            writer.close(); // Writing will not be made if there is not a close statement.
-        } catch(IOException e) {
-            e.printStackTrace();
-        }
-    }//end of writeFile class
 
     //Method to gather all information needed to make a member object
     public static Member signUpNewMember() throws Exception {
@@ -160,6 +191,13 @@ public class TestCase {
                 ".\nYour password is " + x.getPassword() + ".\nYour member id is " + x.getId() + ".\n");
             return x;
     }//end of sign up member class
+
+    public static boolean doYouWishToSee(String feature) {
+        System.out.println("Do you wish to see " + feature + " (Yes or No)?");
+        String response = input.nextLine();
+        System.out.println(); //To keep the output clean by adding a new line.
+        return response.equalsIgnoreCase("yes");
+    }
 
     //This class will verify that the passed username is not matching any in the file.
     public static boolean checkIfExistingInFile(String passedText) throws IOException{
