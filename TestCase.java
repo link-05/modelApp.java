@@ -48,7 +48,7 @@ public class TestCase {
             loggedInUser = loginUser();
         }
         if(loggedInUser.getFirstName().equals("null")) return;
-
+        //Start code for the event section or event feature of the code.
         if(doYouWishToSee("events")) {
             //The logged in user can now use the first feature of the system which is event.
             //List of all the events.
@@ -62,15 +62,25 @@ public class TestCase {
             allEvents.add(firstTournament);
             allEvents.add(firstWideLesson);
             for(Event event : allEvents) {
-                event.addEventToFile();
+                //Check if the event already exists in the file. If yes, then do not make another copy of the event.
+                if(!event.doesEventExistInFile(event.toFileString(), 0)) {
+                    event.addEventToFile();
+                }
             }
-
             System.out.println("Here are all the events that we have: ");
             for(Event event : allEvents) {
                 System.out.println(event);
             }
-            //Need to implement the interaction with the user to choose which event they want to attend.
-        }
+            //Ask user if they wish to attend an event.
+            if(doYouWishToSee("and attend any events?")) {     
+                System.out.println("Which event would you like to attend? (Please enter the event ID)");
+                int eventId = Integer.parseInt(input.nextLine());
+                DataMatch dataComparison = new DataMatch();
+                if(dataComparison.isDataInFile("" + eventId, 0)) {
+                    //Sign up the person for the follow up after signed area 
+                }
+            }
+        } //End of  event section
 
     }
     

@@ -16,6 +16,12 @@ public class DataMatch {
         */
     }
 
+    //Method to check if the information matches the current line at x index.
+    public boolean isDataInFile(String input, int index) { 
+        setCurrentLine(input);
+        return this.currentLine[index].equalsIgnoreCase(input.substring(0, 1));//The event id)
+    }
+
     //Method to read each line from the txt file for comparison of data of username and password, returns a member.
     public Member findDataInFile(String usernameInput, String passwordInput) {
         try(BufferedReader reader = new BufferedReader(new FileReader("MemberList.txt"))) {
