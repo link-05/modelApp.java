@@ -13,6 +13,7 @@ import java.util.ArrayList;
 
 public class TestCase {
     private static Scanner input = new Scanner(System.in);
+    private static DataMatch compareData = new DataMatch();
     public static void main(String[] args) {
         //The condition for the while loop to create user
         boolean needToStillCreateNewUser = true;
@@ -62,10 +63,7 @@ public class TestCase {
             allEvents.add(firstTournament);
             allEvents.add(firstWideLesson);
             for(Event event : allEvents) {
-                //Check if the event already exists in the file. If yes, then do not make another copy of the event.
-                if(!event.doesEventExistInFile(event.toFileString(), 0)) {
-                    event.addEventToFile();
-                }
+                event.addEventToFile();
             }
             System.out.println("Here are all the events that we have: ");
             for(Event event : allEvents) {
@@ -76,7 +74,7 @@ public class TestCase {
                 System.out.println("Which event would you like to attend? (Please enter the event ID)");
                 int eventId = Integer.parseInt(input.nextLine());
                 DataMatch dataComparison = new DataMatch();
-                if(dataComparison.isDataInFile("" + eventId, 0)) {
+                if(dataComparison.isDataInFile("" + eventId, 0, "EventList.txt")) {
                     //Sign up the person for the follow up after signed area 
                 }
             }
@@ -176,7 +174,7 @@ public class TestCase {
             //is always true but flips to false when entered username does not already exist in file and passes validation.
                 System.out.println("Please enter in your desired username from 9 letter up to 20 letters (Must contain a special character of ascii 33 to 42): ");
                 thatUser = input.nextLine();
-                if(checkIfExistingInFile(thatUser)) {
+                if(compareData.isDataInFile(thatUser, 4, "MemberList.txt")) {
                     System.out.println("Username already exist please use a different one");
                 }else if(userCheck.isValidUsername(thatUser)) {
                     needToRedoUserName = false;
@@ -210,19 +208,19 @@ public class TestCase {
     }
 
     //This class will verify that the passed username is not matching any in the file.
-    public static boolean checkIfExistingInFile(String passedText) throws IOException{
-        try(BufferedReader reader = new BufferedReader(new FileReader("MemberList.txt"))) {
-            String line;
-            //Will check through reader for the passed text which may be username until it does not have any line left. 
-            while((line = reader.readLine()) != null) {
-                //Allow the saved file line to compare against the lowercase 
-                if(line.toLowerCase().contains(passedText.toLowerCase())) return true;
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return false;
-    }
+    // public static boolean checkIfExistingInFile(String passedText) throws IOException{
+    //     try(BufferedReader reader = new BufferedReader(new FileReader("MemberList.txt"))) {
+    //         String line;
+    //         //Will check through reader for the passed text which may be username until it does not have any line left. 
+    //         while((line = reader.readLine()) != null) {
+    //             //Allow the saved file line to compare against the lowercase 
+    //             if(line.toLowerCase().contains(passedText.toLowerCase())) return true;
+    //         }
+    //     } catch (Exception e) {
+    //         e.printStackTrace();
+    //     }
+    //     return false;
+    // }
 
 }
 

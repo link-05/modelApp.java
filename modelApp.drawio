@@ -1,12 +1,12 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="1648" dy="618" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1484" dy="515" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
-        <mxCell id="zkfFHV4jXpPFQw0GAbJ--0" value="TestCase" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1" collapsed="1">
-          <mxGeometry x="-5" y="10" width="160" height="26" as="geometry">
-            <mxRectangle x="-10" y="10" width="175" height="200" as="alternateBounds" />
+        <mxCell id="zkfFHV4jXpPFQw0GAbJ--0" value="TestCase" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-5" y="10" width="175" height="200" as="geometry">
+            <mxRectangle x="-5" y="10" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="zkfFHV4jXpPFQw0GAbJ--1" value="Static Scanner" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="zkfFHV4jXpPFQw0GAbJ--0" vertex="1">
@@ -15,12 +15,12 @@
         <mxCell id="zkfFHV4jXpPFQw0GAbJ--4" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="zkfFHV4jXpPFQw0GAbJ--0" vertex="1">
           <mxGeometry y="52" width="175" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="8TvHCBcf59wkewiUkZPg-1" value="&lt;span style=&quot;text-align: left;&quot;&gt;readFile()&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; text-align: left;&quot;&gt;&lt;span style=&quot;text-align: left;&quot;&gt;writeMemberInFile()&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; text-align: left;&quot;&gt;&lt;span style=&quot;text-align: left;&quot;&gt;loginUser()&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; text-align: left;&quot;&gt;&lt;span style=&quot;text-align: left;&quot;&gt;askToRegisterMoreMember()&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; text-align: left;&quot;&gt;&lt;span style=&quot;text-align: left;&quot;&gt;signUpNewMember()&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;text-align: left;&quot;&gt;doYouWishToSee()&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;text-align: left;&quot;&gt;checkIfExistingInFile()&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="zkfFHV4jXpPFQw0GAbJ--0">
+        <mxCell id="8TvHCBcf59wkewiUkZPg-1" value="&lt;span style=&quot;text-align: left;&quot;&gt;readFile()&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; text-align: left;&quot;&gt;&lt;span style=&quot;text-align: left;&quot;&gt;writeMemberInFile()&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; text-align: left;&quot;&gt;&lt;span style=&quot;text-align: left;&quot;&gt;loginUser()&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; text-align: left;&quot;&gt;&lt;span style=&quot;text-align: left;&quot;&gt;askToRegisterMoreMember()&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; text-align: left;&quot;&gt;&lt;span style=&quot;text-align: left;&quot;&gt;signUpNewMember()&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;text-align: left;&quot;&gt;doYouWishToSee()&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;text-align: left;&quot;&gt;checkIfExistingInFile()&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="zkfFHV4jXpPFQw0GAbJ--0" vertex="1">
           <mxGeometry y="60" width="175" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="zkfFHV4jXpPFQw0GAbJ--6" value="Member" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1" collapsed="1">
-          <mxGeometry x="-10" y="300" width="160" height="26" as="geometry">
-            <mxRectangle x="-10" y="300" width="170" height="242" as="alternateBounds" />
+        <mxCell id="zkfFHV4jXpPFQw0GAbJ--6" value="Member" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-340" y="124" width="170" height="242" as="geometry">
+            <mxRectangle x="-10" y="300" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="zkfFHV4jXpPFQw0GAbJ--7" value="-String firstName&#xa;-String lastName&#xa;-String username&#xa;-String password&#xa;-Static double members&#xa;-String dateOfBirth&#xa;-String id" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="zkfFHV4jXpPFQw0GAbJ--6" vertex="1">
@@ -39,33 +39,36 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="zkfFHV4jXpPFQw0GAbJ--13" value="Event" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="320" y="516" width="160" height="70" as="geometry">
+          <mxGeometry x="310" y="380" width="260" height="350" as="geometry">
             <mxRectangle x="340" y="380" width="170" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="zkfFHV4jXpPFQw0GAbJ--14" value="Salary" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="zkfFHV4jXpPFQw0GAbJ--13" vertex="1">
-          <mxGeometry y="26" width="160" height="26" as="geometry" />
+        <mxCell id="zkfFHV4jXpPFQw0GAbJ--14" value="String eventTitle&#xa;String eventDescription&#xa;String eventLocation&#xa;String eventTime&#xa;String eventDate&#xa;String eventID&#xa;ArrayList&lt;Integer&gt; attendees" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="zkfFHV4jXpPFQw0GAbJ--13" vertex="1">
+          <mxGeometry y="26" width="260" height="104" as="geometry" />
         </mxCell>
         <mxCell id="zkfFHV4jXpPFQw0GAbJ--15" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="zkfFHV4jXpPFQw0GAbJ--13" vertex="1">
-          <mxGeometry y="52" width="160" height="8" as="geometry" />
+          <mxGeometry y="130" width="260" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="zkfFHV4jXpPFQw0GAbJ--16" value="" style="endArrow=block;endSize=10;endFill=0;shadow=0;strokeWidth=1;rounded=0;curved=0;edgeStyle=elbowEdgeStyle;elbow=vertical;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.422;exitY=1.028;exitDx=0;exitDy=0;exitPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="zkfFHV4jXpPFQw0GAbJ--10" target="zkfFHV4jXpPFQw0GAbJ--13" edge="1">
+        <mxCell id="FG-GNEnDzt6LtZn0GuA3-4" value="addAttendee()&lt;div&gt;removeAttendee()&lt;/div&gt;&lt;div&gt;viewAttendeeList()&lt;/div&gt;&lt;div&gt;getAttendee()&lt;/div&gt;&lt;div&gt;countNumberOfAttendee()&lt;/div&gt;&lt;div&gt;toFileString()&lt;/div&gt;&lt;div&gt;toString()&lt;/div&gt;&lt;div&gt;doesEventExistInFile(String input, int index)&lt;/div&gt;&lt;div&gt;addEventToFile()&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=1;points=[];autosize=1;strokeColor=none;fillColor=none;movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;imageAspect=0;" parent="zkfFHV4jXpPFQw0GAbJ--13" vertex="1">
+          <mxGeometry y="138" width="260" height="152" as="geometry" />
+        </mxCell>
+        <mxCell id="zkfFHV4jXpPFQw0GAbJ--16" value="" style="endArrow=block;endSize=10;endFill=0;shadow=0;strokeWidth=1;rounded=0;curved=0;edgeStyle=elbowEdgeStyle;elbow=vertical;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.435;exitY=1.036;exitDx=0;exitDy=0;exitPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" target="zkfFHV4jXpPFQw0GAbJ--13" edge="1" source="zkfFHV4jXpPFQw0GAbJ--10">
           <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="60" y="628" as="sourcePoint" />
-            <mxPoint x="397.96000000000026" y="602" as="targetPoint" />
+            <mxPoint x="-280" y="449.9999999999998" as="sourcePoint" />
+            <mxPoint x="425" y="816" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="220" y="640" />
+              <mxPoint x="195" y="815.65" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="8TvHCBcf59wkewiUkZPg-23" value="After a member is logged in. The events will be prompted" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="zkfFHV4jXpPFQw0GAbJ--16">
+        <mxCell id="8TvHCBcf59wkewiUkZPg-23" value="After a member is logged in. The events will be prompted and made by TestCase()" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="zkfFHV4jXpPFQw0GAbJ--16" vertex="1" connectable="0">
           <mxGeometry x="-0.0528" y="-2" relative="1" as="geometry">
             <mxPoint x="22" y="-2" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="zkfFHV4jXpPFQw0GAbJ--17" value="scoreReport" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1" collapsed="1">
-          <mxGeometry x="508" y="120" width="160" height="26" as="geometry">
-            <mxRectangle x="508" y="120" width="160" height="216" as="alternateBounds" />
+        <mxCell id="zkfFHV4jXpPFQw0GAbJ--17" value="scoreReport" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="508" y="120" width="160" height="216" as="geometry">
+            <mxRectangle x="508" y="120" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="zkfFHV4jXpPFQw0GAbJ--21" value="To be made" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" parent="zkfFHV4jXpPFQw0GAbJ--17" vertex="1">
@@ -89,94 +92,114 @@
             <mxPoint y="4" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="zkfFHV4jXpPFQw0GAbJ--28" value="1" style="resizable=0;align=right;verticalAlign=bottom;labelBackgroundColor=none;fontSize=12;" parent="zkfFHV4jXpPFQw0GAbJ--26" connectable="0" vertex="1">
-          <mxGeometry x="1" relative="1" as="geometry">
-            <mxPoint x="-7" y="4" as="offset" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="zkfFHV4jXpPFQw0GAbJ--29" value="Score input into app during the event" style="text;html=1;resizable=0;points=[];;align=center;verticalAlign=middle;labelBackgroundColor=none;rounded=0;shadow=0;strokeWidth=1;fontSize=12;" parent="zkfFHV4jXpPFQw0GAbJ--26" vertex="1" connectable="0">
           <mxGeometry x="0.5" y="49" relative="1" as="geometry">
-            <mxPoint x="-38" y="40" as="offset" />
+            <mxPoint x="-103" y="40" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="8TvHCBcf59wkewiUkZPg-4" value="EventList" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="8TvHCBcf59wkewiUkZPg-4" value="EventList" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="590" y="450" width="160" height="138" as="geometry">
             <mxRectangle x="130" y="380" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="8TvHCBcf59wkewiUkZPg-5" value="Student Number" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="8TvHCBcf59wkewiUkZPg-4">
+        <mxCell id="8TvHCBcf59wkewiUkZPg-5" value="To be determined" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="8TvHCBcf59wkewiUkZPg-4" vertex="1">
           <mxGeometry y="26" width="160" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="8TvHCBcf59wkewiUkZPg-6" value="Average Mark" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="8TvHCBcf59wkewiUkZPg-4">
-          <mxGeometry y="52" width="160" height="26" as="geometry" />
+        <mxCell id="8TvHCBcf59wkewiUkZPg-7" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="8TvHCBcf59wkewiUkZPg-4" vertex="1">
+          <mxGeometry y="52" width="160" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="8TvHCBcf59wkewiUkZPg-7" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="8TvHCBcf59wkewiUkZPg-4">
-          <mxGeometry y="78" width="160" height="8" as="geometry" />
+        <mxCell id="8TvHCBcf59wkewiUkZPg-9" value="tbd" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="8TvHCBcf59wkewiUkZPg-4" vertex="1">
+          <mxGeometry y="60" width="160" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="8TvHCBcf59wkewiUkZPg-8" value="Is Eligible To Enroll" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=4" vertex="1" parent="8TvHCBcf59wkewiUkZPg-4">
-          <mxGeometry y="86" width="160" height="26" as="geometry" />
+        <mxCell id="8TvHCBcf59wkewiUkZPg-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.004;exitY=0.046;exitDx=0;exitDy=0;exitPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="8TvHCBcf59wkewiUkZPg-4" target="zkfFHV4jXpPFQw0GAbJ--14" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="591" y="458" />
+            </Array>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="8TvHCBcf59wkewiUkZPg-9" value="Get Seminars Taken" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="8TvHCBcf59wkewiUkZPg-4">
-          <mxGeometry y="112" width="160" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="8TvHCBcf59wkewiUkZPg-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="8TvHCBcf59wkewiUkZPg-6" target="zkfFHV4jXpPFQw0GAbJ--14">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="8TvHCBcf59wkewiUkZPg-11" value="DataMatch" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="250" y="210" width="160" height="138" as="geometry">
+        <mxCell id="8TvHCBcf59wkewiUkZPg-11" value="DataMatch" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="120" y="890" width="210" height="170" as="geometry">
             <mxRectangle x="130" y="380" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="8TvHCBcf59wkewiUkZPg-12" value="Student Number" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="8TvHCBcf59wkewiUkZPg-11">
-          <mxGeometry y="26" width="160" height="26" as="geometry" />
+        <mxCell id="8TvHCBcf59wkewiUkZPg-12" value="-String[] currentLine" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="8TvHCBcf59wkewiUkZPg-11" vertex="1">
+          <mxGeometry y="26" width="210" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="8TvHCBcf59wkewiUkZPg-13" value="Average Mark" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="8TvHCBcf59wkewiUkZPg-11">
-          <mxGeometry y="52" width="160" height="26" as="geometry" />
+        <mxCell id="8TvHCBcf59wkewiUkZPg-14" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="8TvHCBcf59wkewiUkZPg-11" vertex="1">
+          <mxGeometry y="52" width="210" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="8TvHCBcf59wkewiUkZPg-14" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="8TvHCBcf59wkewiUkZPg-11">
-          <mxGeometry y="78" width="160" height="8" as="geometry" />
+        <mxCell id="8TvHCBcf59wkewiUkZPg-15" value="setCurrentLine() &#xa;isMatchingUsernameAndPassword()&#xa;isMatchingMemberID()&#xa;printCurrentLine()&#xa;makeTheMember()&#xa;findDataInFile()&#xa;isDataInFile()" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=4" parent="8TvHCBcf59wkewiUkZPg-11" vertex="1">
+          <mxGeometry y="60" width="210" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="8TvHCBcf59wkewiUkZPg-15" value="Is Eligible To Enroll" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=4" vertex="1" parent="8TvHCBcf59wkewiUkZPg-11">
-          <mxGeometry y="86" width="160" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="8TvHCBcf59wkewiUkZPg-16" value="Get Seminars Taken" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="8TvHCBcf59wkewiUkZPg-11">
-          <mxGeometry y="112" width="160" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="8TvHCBcf59wkewiUkZPg-17" value="CheckIn" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="8TvHCBcf59wkewiUkZPg-17" value="CheckIn" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="590" y="630" width="160" height="138" as="geometry">
             <mxRectangle x="130" y="380" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="8TvHCBcf59wkewiUkZPg-18" value="Student Number" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="8TvHCBcf59wkewiUkZPg-17">
+        <mxCell id="8TvHCBcf59wkewiUkZPg-18" value="Student Number" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="8TvHCBcf59wkewiUkZPg-17" vertex="1">
           <mxGeometry y="26" width="160" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="8TvHCBcf59wkewiUkZPg-19" value="Average Mark" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="8TvHCBcf59wkewiUkZPg-17">
+        <mxCell id="8TvHCBcf59wkewiUkZPg-19" value="Average Mark" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" parent="8TvHCBcf59wkewiUkZPg-17" vertex="1">
           <mxGeometry y="52" width="160" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="8TvHCBcf59wkewiUkZPg-20" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="8TvHCBcf59wkewiUkZPg-17">
+        <mxCell id="8TvHCBcf59wkewiUkZPg-20" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="8TvHCBcf59wkewiUkZPg-17" vertex="1">
           <mxGeometry y="78" width="160" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="8TvHCBcf59wkewiUkZPg-21" value="Is Eligible To Enroll" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=4" vertex="1" parent="8TvHCBcf59wkewiUkZPg-17">
+        <mxCell id="8TvHCBcf59wkewiUkZPg-21" value="Is Eligible To Enroll" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=4" parent="8TvHCBcf59wkewiUkZPg-17" vertex="1">
           <mxGeometry y="86" width="160" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="8TvHCBcf59wkewiUkZPg-22" value="Get Seminars Taken" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="8TvHCBcf59wkewiUkZPg-17">
+        <mxCell id="8TvHCBcf59wkewiUkZPg-22" value="Get Seminars Taken" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="8TvHCBcf59wkewiUkZPg-17" vertex="1">
           <mxGeometry y="112" width="160" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="8TvHCBcf59wkewiUkZPg-24" value="A class to hold basic&lt;div&gt;informations about&lt;/div&gt;&lt;div&gt;a member.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Their first and last name&lt;/div&gt;&lt;div&gt;are used for password&lt;/div&gt;&lt;div&gt;safety. username and&lt;/div&gt;&lt;div&gt;password are saved in&lt;/div&gt;&lt;div&gt;files. Members is the&lt;/div&gt;&lt;div&gt;counter for the id value&lt;/div&gt;&lt;div&gt;since the txt file and my&amp;nbsp;&lt;/div&gt;&lt;div&gt;code runs everything&lt;/div&gt;&lt;div&gt;from fresh at run.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;compare passed in&lt;/div&gt;&lt;div&gt;input of username and&lt;/div&gt;&lt;div&gt;same for password.&lt;/div&gt;&lt;div&gt;Displaying information&amp;nbsp;&lt;/div&gt;&lt;div&gt;with getter method.&lt;/div&gt;&lt;div&gt;updateMemberCount&lt;/div&gt;&lt;div&gt;will take required loop&lt;/div&gt;&lt;div&gt;to read the file and update&lt;/div&gt;&lt;div&gt;member count accordingly&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=default;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="-260" y="246" width="160" height="340" as="geometry" />
+        <mxCell id="8TvHCBcf59wkewiUkZPg-24" value="A class to hold basic&lt;div&gt;informations about&lt;/div&gt;&lt;div&gt;a member.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Their first and last name&lt;/div&gt;&lt;div&gt;are used for password&lt;/div&gt;&lt;div&gt;safety. username and&lt;/div&gt;&lt;div&gt;password are saved in&lt;/div&gt;&lt;div&gt;files. Members is the&lt;/div&gt;&lt;div&gt;counter for the id value&lt;/div&gt;&lt;div&gt;since the txt file and my&amp;nbsp;&lt;/div&gt;&lt;div&gt;code runs everything&lt;/div&gt;&lt;div&gt;from fresh at run.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;compare passed in&lt;/div&gt;&lt;div&gt;input of username and&lt;/div&gt;&lt;div&gt;same for password.&lt;/div&gt;&lt;div&gt;Displaying information&amp;nbsp;&lt;/div&gt;&lt;div&gt;with getter method.&lt;/div&gt;&lt;div&gt;updateMemberCount&lt;/div&gt;&lt;div&gt;will take required loop&lt;/div&gt;&lt;div&gt;to read the file and update&lt;/div&gt;&lt;div&gt;member count accordingly&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=default;fillColor=none;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-590" y="70" width="160" height="340" as="geometry" />
         </mxCell>
-        <mxCell id="8TvHCBcf59wkewiUkZPg-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="zkfFHV4jXpPFQw0GAbJ--7">
+        <mxCell id="8TvHCBcf59wkewiUkZPg-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="zkfFHV4jXpPFQw0GAbJ--7" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-100" y="570" as="targetPoint" />
+            <mxPoint x="-430" y="394" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="-10" y="390" />
-              <mxPoint x="-55" y="390" />
-              <mxPoint x="-55" y="570" />
-              <mxPoint x="-100" y="570" />
+              <mxPoint x="-340" y="214" />
+              <mxPoint x="-385" y="214" />
+              <mxPoint x="-385" y="394" />
+              <mxPoint x="-430" y="394" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="8TvHCBcf59wkewiUkZPg-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.997;entryY=0.013;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="zkfFHV4jXpPFQw0GAbJ--7" target="8TvHCBcf59wkewiUkZPg-24">
+        <mxCell id="8TvHCBcf59wkewiUkZPg-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.997;entryY=0.013;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="zkfFHV4jXpPFQw0GAbJ--7" target="8TvHCBcf59wkewiUkZPg-24" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FG-GNEnDzt6LtZn0GuA3-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="FG-GNEnDzt6LtZn0GuA3-0" target="zkfFHV4jXpPFQw0GAbJ--4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FG-GNEnDzt6LtZn0GuA3-0" value="All user prompt and direct interaction will be made here. Reading and writing file&lt;div&gt;&amp;nbsp;does exist here&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;however its main purpose is to move forwards the events.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;TestCase class is for gathering information and redirect.&amp;nbsp;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="210" y="2" width="450" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FG-GNEnDzt6LtZn0GuA3-2" value="MemberList.txt&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-130" y="240" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="FG-GNEnDzt6LtZn0GuA3-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="FG-GNEnDzt6LtZn0GuA3-3" target="zkfFHV4jXpPFQw0GAbJ--14" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FG-GNEnDzt6LtZn0GuA3-3" value="Attendees list is for storing all the attendees for&amp;nbsp;&lt;div&gt;an event. It only stores the member id of the user.&lt;/div&gt;&lt;div&gt;Can be paired with dataMatch&#39;s idToNameMethod&lt;/div&gt;&lt;div&gt;to store the persons name if desired.&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-40" y="400" width="290" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="FG-GNEnDzt6LtZn0GuA3-6" value="The event all have an attendee list that hold each participant&lt;div&gt;add, remove, and view the list.&amp;nbsp;&lt;/div&gt;&lt;div&gt;Returns the whole list of attendee for checkin to hold the information.&lt;/div&gt;&lt;div&gt;toFileString is for saving event as a String in Files. The toString is for printing.&lt;/div&gt;&lt;div&gt;checks the input and index to check for a match.&lt;/div&gt;&lt;div&gt;Finally the file can be added to the file.&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-132.5" y="500" width="430" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="FG-GNEnDzt6LtZn0GuA3-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.008;entryY=0.549;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="FG-GNEnDzt6LtZn0GuA3-6" target="FG-GNEnDzt6LtZn0GuA3-4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="95" y="655" />
+              <mxPoint x="280" y="655" />
+              <mxPoint x="280" y="601" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FG-GNEnDzt6LtZn0GuA3-8" value="-Breaks a single line of string to tokens in a string array&lt;div&gt;use index in String[] to compare with argument of username and password&lt;/div&gt;&lt;div&gt;-Not used yet&lt;/div&gt;&lt;div&gt;-Used to report successful registration.&lt;/div&gt;&lt;div&gt;- used for any return that needs a fish.&lt;/div&gt;&lt;div&gt;- check if username and password is still related that long before its done.&lt;/div&gt;&lt;div&gt;this is method that is universal so it can leave more space for growth as&lt;/div&gt;&lt;div&gt;&amp;nbsp;it is currently done with my task.&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;imageAspect=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="378" y="910" width="420" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="FG-GNEnDzt6LtZn0GuA3-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.01;entryY=0.394;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="FG-GNEnDzt6LtZn0GuA3-8" target="8TvHCBcf59wkewiUkZPg-15" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>

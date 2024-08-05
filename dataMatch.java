@@ -9,7 +9,8 @@ public class DataMatch {
         this.currentLine = null;
     }
     //First Method to call in order to set the current line being processed. Current line is the line read by the file reader.
-    public void setCurrentLine(String currentLine) {
+    //Only the DataMatch class needs to have a setCurrentLine method because it will be the only one that needs to read it. 
+    private void setCurrentLine(String currentLine) {
         this.currentLine = currentLine.split(",");
         /* index 1 is member id, index 2 is first name, index 3 is last name
          * index 4 is username, index 5 is password, index 6 is date of birth
@@ -17,10 +18,30 @@ public class DataMatch {
     }
 
     //Method to check if the information matches the current line at x index.
-    public boolean isDataInFile(String input, int index) { 
-        setCurrentLine(input);
-        return this.currentLine[index].equalsIgnoreCase(input.substring(0, 1));//The event id)
-    }
+    public boolean isDataInFile(String input, int index, String fileName) { 
+        try(BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
+            String line;
+            //Will check through reader for the passed text which may be username until it does not have any line left.     
+            while((line = reader.readLine()) != null) {
+                setCurrentLine(line);
+                //Returns the equality of the two tokens at the index value.
+                //For the purpose of this current method the index will be taken in otherwise it should be a string like username password etc.
+                if(input.contains(",")) {
+                    if(this.currentLine[index].equalsIgnoreCase((input.split(",")[index])));//The event id)
+                }
+                else if(index == 4) {                    
+                    //Allow the saved file line to compare against the lowercase 
+                    if(currentLine[index].toLowerCase().contains(input.toLowerCase())) return true;
+                }
+                else if(index == 0) {
+                    if(currentLine[index].equalsIgnoreCase(input)) return true;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }//end of isDataInFile method
 
     //Method to read each line from the txt file for comparison of data of username and password, returns a member.
     public Member findDataInFile(String usernameInput, String passwordInput) {
@@ -44,7 +65,8 @@ public class DataMatch {
         return new Member(); //return a new null member if no match is found in the file.
     }
 
-    //Overload Method to read each line from the txt file for comparison of data of memberID, returns a member.
+    //Overload Method to read each line from the txt file for comparison of data of memberID, returns a full name.
+    //This will be implemented by the checkIn class to make a list of everyone attending an event listed by name.
     public String findDataInFile(Integer memberID) {
         try(BufferedReader reader = new BufferedReader(new FileReader("MemberList.txt"))) {
             String line;                
