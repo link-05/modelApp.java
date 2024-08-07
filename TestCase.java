@@ -76,6 +76,10 @@ public class TestCase {
                 DataMatch dataComparison = new DataMatch();
                 if(dataComparison.isDataInFile("" + eventId, 0, "EventList.txt")) {
                     //Sign up the person for the follow up after signed area 
+                    // addAttendee method will add the logged in user's ID to the event's attendees list.
+                    dataComparison.findEventByID(allEvents, "" + eventId).addAttendee(loggedInUser.getId());
+                    //code so the allEvents will end up being able to be organized back out as value of what. Quality of effectiveness is required.
+                    //Check each mmeber in the code and move it so that the two are easier to add. for checkIn txt files.
                 }
             }
         } //End of  event section
@@ -157,19 +161,16 @@ public class TestCase {
     //Method to gather all information needed to make a member object
     public static Member signUpNewMember() throws Exception {
         //get all necessary information for creating a member account.
-                //Used to loop the username 
-            boolean needToRedoUserName = true;  
-            //Get the first and last name of the user to be used for password check later.
-
-            System.out.println(("What is your first name?"));
-            String first = input.nextLine();
-
-            System.out.println(("What is your last name?"));
-            String last = input.nextLine();
-            //Create a Valid object for checking the username and password.
-            Valid userCheck = new Valid(8, 20, true, first, last);
-            
-            String thatUser = "";
+        //Used to loop the username 
+        boolean needToRedoUserName = true;  
+        //Get the first and last name of the user to be used for password check later.
+        System.out.println(("What is your first name?"));
+        String first = input.nextLine();
+        System.out.println(("What is your last name?"));
+        String last = input.nextLine();
+        //Create a Valid object for checking the username and password.
+        Valid userCheck = new Valid(8, 20, true, first, last);  
+        String thatUser = "";
             while(needToRedoUserName) { 
             //is always true but flips to false when entered username does not already exist in file and passes validation.
                 System.out.println("Please enter in your desired username from 9 letter up to 20 letters (Must contain a special character of ascii 33 to 42): ");
@@ -181,15 +182,14 @@ public class TestCase {
                 }
             }//end of username check 
 
-            //Password check
+        //Password check
+        System.out.println("Please enter in your desired password: ");
+        String pass = input.nextLine();
+        //need to be opposite because if  password is valid then it will return true which should not ask for password again
+        while(!userCheck.isValidPassword(pass)) {
             System.out.println("Please enter in your desired password: ");
-            String pass = input.nextLine();
-            //need to be opposite because if  password is valid then it will return true which should not ask for password again
-            while(!userCheck.isValidPassword(pass)) {
-                System.out.println("Please enter in your desired password: ");
-                pass = input.nextLine();
+            pass = input.nextLine();
             }//end of password check
-
             System.out.println("Please enter in your date of birth (mm/dd/yyyy): ");
             String dob = input.nextLine();
             //end of information gathering
@@ -206,21 +206,5 @@ public class TestCase {
         System.out.println(); //To keep the output clean by adding a new line.
         return response.equalsIgnoreCase("yes");
     }
-
-    //This class will verify that the passed username is not matching any in the file.
-    // public static boolean checkIfExistingInFile(String passedText) throws IOException{
-    //     try(BufferedReader reader = new BufferedReader(new FileReader("MemberList.txt"))) {
-    //         String line;
-    //         //Will check through reader for the passed text which may be username until it does not have any line left. 
-    //         while((line = reader.readLine()) != null) {
-    //             //Allow the saved file line to compare against the lowercase 
-    //             if(line.toLowerCase().contains(passedText.toLowerCase())) return true;
-    //         }
-    //     } catch (Exception e) {
-    //         e.printStackTrace();
-    //     }
-    //     return false;
-    // }
-
 }
 

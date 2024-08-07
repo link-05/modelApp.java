@@ -50,6 +50,11 @@ public class Event {
         return attendees;
     }
 
+    //This method will give the event id , used in DataMatch.
+    public int getId() {
+        return eventID;
+    }
+
     //Will be passed into the checkIn class to track the amount of attendees in total.
     public int countNumberOfAttendees() {
         return attendees.size();

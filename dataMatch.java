@@ -1,5 +1,6 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.util.ArrayList;
 
 public class DataMatch {
     private String[] currentLine;
@@ -88,15 +89,14 @@ public class DataMatch {
         return null; //return a new null member if no match is found in the file which is impossible so it is just for java not to freak out.
     }
 
-    //Method to check if the current username matches the one in the file.
-    private boolean isMatchingUsernameAndPassword(String thatUser, String thatPassword) {
-        return this.currentLine[3].equalsIgnoreCase(thatUser) && this.currentLine[4].equalsIgnoreCase(thatPassword);
-    }
-
-    //Method to check if the current member ID matches the one in the file.
-    private boolean isMatchingMemberID(Integer thatID) {
-        //The id is a String type in the file, so it needs to be converted to integer before comparing.
-        return Integer.parseInt(this.currentLine[0]) == thatID;
+    //Method to find data but for events and return the event.
+    public Event findEventByID(ArrayList<Event> events, String userInput) {
+        for(Event event : events) {
+            if(event.getId() == (Integer.parseInt(userInput))) {
+                return event;
+            }
+        }
+        return null;
     }
 
     //Read out each value for current line
@@ -112,6 +112,16 @@ public class DataMatch {
     public Member makeTheMember() {
         return new Member(this.currentLine[0], this.currentLine[1], this.currentLine[2], this.currentLine[3], 
                 this.currentLine[4], this.currentLine[5]);
+    }
+    //Method to check if the current username matches the one in the file.
+    private boolean isMatchingUsernameAndPassword(String thatUser, String thatPassword) {
+        return this.currentLine[3].equalsIgnoreCase(thatUser) && this.currentLine[4].equalsIgnoreCase(thatPassword);
+    }
+
+    //Method to check if the current member ID matches the one in the file.
+    private boolean isMatchingMemberID(Integer thatID) {
+        //The id is a String type in the file, so it needs to be converted to integer before comparing.
+        return Integer.parseInt(this.currentLine[0]) == thatID;
     }
 
     //Method for checkIn to get a member id passed while returning a name for the id number. return first and last name.

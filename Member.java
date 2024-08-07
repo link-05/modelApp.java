@@ -40,18 +40,9 @@ public class Member {
         lastName = "";
     }
 
-    //Method to check if Username match. Used for comparing to input
-    public Boolean compareUsername(String thatUser) {
-        return this.username.equals(thatUser);
-    }
-
-    //Method to check if Password match. Used for comparing to input
-    public Boolean comparePassword(String thatPassword) {
-        return this.password.equals(thatPassword);
-    }
-
     //Getter methods for each instance variable
 
+    //getUsername, getId, getFirstName, getLastName, and getPassword are used by TestCase.java to use the member object to write to the file in sign up user.
     public String getUsername (){
         return username;
     }
@@ -66,6 +57,7 @@ public class Member {
     }
 
     public String getFirstName() {
+
         return firstName;
     }
 
@@ -76,17 +68,7 @@ public class Member {
     public String getDateOfBirth() {
         return dateOfBirth;
     }
-
-    //Setter methods for each instance variable as needed.
-
-    public void setUsername(String newUsername) {
-        username = newUsername;
-    }
-
-    public void setPassword(String newPassword) {
-        password = newPassword;
-    }
-
+    
     // For use to maintain accurate count of member when reading file before writing a new member into file.
     public void updateMemberCount(){
         try {
