@@ -1,24 +1,24 @@
 # Summary
 
-Date : 2024-07-30 14:35:57
+Date : 2024-08-08 08:41:05
 
 Directory /Users/linke/modelApp.java
 
-Total : 8 files,  445 codes, 98 comments, 79 blanks, all 622 lines
+Total : 8 files,  510 codes, 121 comments, 78 blanks, all 709 lines
 
 Summary / [Details](details.md) / [Diff Summary](diff.md) / [Diff Details](diff-details.md)
 
 ## Languages
 | language | files | code | comment | blank | total |
 | :--- | ---: | ---: | ---: | ---: | ---: |
-| Java | 7 | 443 | 98 | 78 | 619 |
-| Markdown | 1 | 2 | 0 | 1 | 3 |
+| Java | 7 | 506 | 121 | 77 | 704 |
+| Markdown | 1 | 4 | 0 | 1 | 5 |
 
 ## Directories
 | path | files | code | comment | blank | total |
 | :--- | ---: | ---: | ---: | ---: | ---: |
-| . | 8 | 445 | 98 | 79 | 622 |
-| . (Files) | 7 | 355 | 82 | 65 | 502 |
+| . | 8 | 510 | 121 | 78 | 709 |
+| . (Files) | 7 | 420 | 105 | 64 | 589 |
 | validation | 1 | 90 | 16 | 14 | 120 |
 | validation/pack | 1 | 90 | 16 | 14 | 120 |
 

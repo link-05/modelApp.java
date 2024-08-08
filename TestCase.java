@@ -69,19 +69,30 @@ public class TestCase {
             for(Event event : allEvents) {
                 System.out.println(event);
             }
+            boolean attendEventSignUp = true;
             //Ask user if they wish to attend an event.
-            if(doYouWishToSee("and attend any events?")) {     
-                System.out.println("Which event would you like to attend? (Please enter the event ID)");
-                int eventId = Integer.parseInt(input.nextLine());
-                DataMatch dataComparison = new DataMatch();
-                if(dataComparison.isDataInFile("" + eventId, 0, "EventList.txt")) {
-                    //Sign up the person for the follow up after signed area 
-                    // addAttendee method will add the logged in user's ID to the event's attendees list.
-                    dataComparison.findEventByID(allEvents, "" + eventId).addAttendee(loggedInUser.getId());
-                    //code so the allEvents will end up being able to be organized back out as value of what. Quality of effectiveness is required.
-                    //Check each mmeber in the code and move it so that the two are easier to add. for checkIn txt files.
+            while(attendEventSignUp) {
+                if(doYouWishToSee("and attend any events?")) {     
+                    System.out.println("Which event would you like to attend? (Please enter the event ID)");
+                    int eventId = Integer.parseInt(input.nextLine());
+                    DataMatch dataComparison = new DataMatch();
+                    if(dataComparison.isDataInFile("" + eventId, 0, "EventList.txt")) {
+                        //Sign up the person for the follow up after signed area 
+                        //findEventByID method will return the event object after searching through the allEvents list for member id.
+                        // addAttendee method will add the logged in user's ID to the event's attendees list.
+                        dataComparison.findEventByID(allEvents, "" + eventId).addAttendee(loggedInUser.getId());
+                        attendEventSignUp = doYouWantToRegisterForMore("events");
+                        //code so the allEvents will end up being able to be organized back out as value of what. Quality of effectiveness is required.
+                        //Check each member in the code and move it so that the two are easier to add. for checkIn txt files.
+                    } else {
+                        System.out.println("Event not found.");
+                        attendEventSignUp = doYouWantToRegisterForMore("events");
+                    }
                 }
-            }
+            } //End of attend event section
+
+            //Feature for checking in the user.
+            
         } //End of  event section
 
     }
@@ -122,7 +133,7 @@ public class TestCase {
     }//end of writeFile class
 
     // Check file for DataMatch class
-    public static Member loginUser() {
+    private static Member loginUser() {
         boolean choiceToLogin = true;
         System.out.println("This is the login screen.");
         while ((choiceToLogin)) {
@@ -151,7 +162,7 @@ public class TestCase {
     }//end loginUser method
 
     //This method ask user to decide if they want to register more members then return the result as a boolean.
-    public static Boolean askToRegisterMoreMember() {
+    private static Boolean askToRegisterMoreMember() {
         System.out.println("Do you wish to register another user? (Y/N)");
         String responseToMakeMoreUser = "";
         responseToMakeMoreUser = input.nextLine();
@@ -159,7 +170,7 @@ public class TestCase {
     }//end of askToRegisterMoreMember method
 
     //Method to gather all information needed to make a member object
-    public static Member signUpNewMember() throws Exception {
+    private static Member signUpNewMember() throws Exception {
         //get all necessary information for creating a member account.
         //Used to loop the username 
         boolean needToRedoUserName = true;  
@@ -200,8 +211,15 @@ public class TestCase {
             return x;
     }//end of sign up member class
 
-    public static boolean doYouWishToSee(String feature) {
+    private static boolean doYouWishToSee(String feature) {
         System.out.println("Do you wish to see " + feature + " (Yes or No)?");
+        String response = input.nextLine();
+        System.out.println(); //To keep the output clean by adding a new line.
+        return response.equalsIgnoreCase("yes");
+    }
+
+    private static boolean doYouWantToRegisterForMore(String feature) {
+        System.out.println("Do you wish to register for more " + feature + " (Yes or No)?");
         String response = input.nextLine();
         System.out.println(); //To keep the output clean by adding a new line.
         return response.equalsIgnoreCase("yes");

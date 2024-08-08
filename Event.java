@@ -71,10 +71,6 @@ public class Event {
                 "\nLocation: " + eventLocation + "\nTime: " + eventTime + "\nDate: " + eventDate + "\n";   
     }
 
-    private boolean doesEventExistInFile() {
-        return eventComparator.isDataInFile("" + eventID, 0, "EventList.txt");
-    }
-
     //Write into file- all details of the event.
     public void addEventToFile() {
         if(doesEventExistInFile() == false) {
@@ -87,4 +83,7 @@ public class Event {
         }
     }
 
+    private boolean doesEventExistInFile() {
+        return eventComparator.isDataInFile("" + eventID, 0, "EventList.txt");
+    }
 }

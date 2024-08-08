@@ -11,12 +11,6 @@ public class DataMatch {
     }
     //First Method to call in order to set the current line being processed. Current line is the line read by the file reader.
     //Only the DataMatch class needs to have a setCurrentLine method because it will be the only one that needs to read it. 
-    private void setCurrentLine(String currentLine) {
-        this.currentLine = currentLine.split(",");
-        /* index 1 is member id, index 2 is first name, index 3 is last name
-         * index 4 is username, index 5 is password, index 6 is date of birth
-        */
-    }
 
     //Method to check if the information matches the current line at x index.
     public boolean isDataInFile(String input, int index, String fileName) { 
@@ -28,7 +22,7 @@ public class DataMatch {
                 //Returns the equality of the two tokens at the index value.
                 //For the purpose of this current method the index will be taken in otherwise it should be a string like username password etc.
                 if(input.contains(",")) {
-                    if(this.currentLine[index].equalsIgnoreCase((input.split(",")[index])));//The event id)
+                    if(this.currentLine[index].equalsIgnoreCase((input.split(",")[index]))) return true;//The event id)
                 }
                 else if(index == 4) {                    
                     //Allow the saved file line to compare against the lowercase 
@@ -99,6 +93,11 @@ public class DataMatch {
         return null;
     }
 
+    //Find check in value with event id.
+    public String findUserToCheckIn(ArrayList<Event> events, String userInput) {
+        //Will use method to check for the event then send the member to check in the txt file.
+        return "";
+    }
     //Read out each value for current line
     public void printCurrentLine() {
         System.out.println("Member id: " + currentLine[0] + 
@@ -112,7 +111,15 @@ public class DataMatch {
     public Member makeTheMember() {
         return new Member(this.currentLine[0], this.currentLine[1], this.currentLine[2], this.currentLine[3], 
                 this.currentLine[4], this.currentLine[5]);
+    } 
+
+    private void setCurrentLine(String currentLine) {
+        this.currentLine = currentLine.split(",");
+        /* index 1 is member id, index 2 is first name, index 3 is last name
+         * index 4 is username, index 5 is password, index 6 is date of birth
+        */
     }
+
     //Method to check if the current username matches the one in the file.
     private boolean isMatchingUsernameAndPassword(String thatUser, String thatPassword) {
         return this.currentLine[3].equalsIgnoreCase(thatUser) && this.currentLine[4].equalsIgnoreCase(thatPassword);
