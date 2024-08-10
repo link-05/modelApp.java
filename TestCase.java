@@ -6,10 +6,14 @@ import java.io.FileReader;
 import java.util.Scanner;
 import validation.pack.*;
 import java.util.ArrayList;
-//To be extracting member information from txt file to convert into members.
-//How to extract member information to login?
-//How to prompt member to login vs create user.
-//How to make history log work.
+/*The questions I'm thinking about here:
+*To be extracting member information from txt file to convert into members.
+*How to extract member information to login?
+*How to prompt member to login vs create user?
+*How to make history log work?
+*What code belongs where?
+*What is the problem I am solving with these classes?
+*/
 
 public class TestCase {
     private static Scanner input = new Scanner(System.in);
@@ -90,11 +94,11 @@ public class TestCase {
                     }
                 }
             } //End of attend event section
+            //Method to display event list for members in each event.
 
             //Feature for checking in the user.
-            
-        } //End of  event section
 
+        } //End of  event section
     }
     
 
@@ -113,6 +117,14 @@ public class TestCase {
         
     }//end of read file method
 
+    //Read file from events while displaying all the attendees for an event. Temporary solution until the actual txt file is intialized and fixed.
+    public static void readAttendeesInEachEvent(int eventId, ArrayList<Event> allEvents) {
+        for(Event event: allEvents) {
+            for(Integer num: event.getAttendees()) {
+                System.out.println(compareData.findDataInFile(num));
+            }
+        }
+    }
     //Write file by passing in a member object to extract information. Append file to not overwrite existing file information.
     public static void writeMemberInFile(Member newMember, boolean append) throws IOException{
         //Try-catch block to let it run
